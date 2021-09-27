@@ -1,0 +1,139 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* custom properties */
+:root{
+   /* --red: #05386b;
+    --accent-red: #379683;
+    --yellow:  #edf5e1;
+    --accent-yellow: #8ee4af;
+    --dark-yellow:  #5cdb95; */
+
+ /* so many great designs i cant decide !?!?!? */
+  /*  --red: #fc4445;
+    --accent-red: #3feee6;
+    --yellow:  #cafafe;
+    --accent-yellow: #97caef;
+    --dark-yellow:  #55bcc9; */
+
+    --red: #026670;
+    --accent-red: #9fedd7;
+    --yellow: #fef9c7;
+    --accent-yellow: #fce181;
+    --dark-yellow: #edeae5;  */
+
+   /* --red: #f13c20;
+    --accent-red: #d79922;
+    --yellow: #efe2ba;
+    --accent-yellow: #4056a1;
+    --dark-yellow: #c5cbe3; */
+
+}
+
+/* global */
+html {
+    font-size: 10px;
+    background-color: var(--yellow);
+}
+body{
+    max-width: 60rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* header */
+header{
+    margin-top: 10%;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 5rem;
+}
+.title{
+    font-family: 'Rubik Beastly', cursive;
+    font-size: 4.8rem;
+    font-weight: 100;
+    margin-bottom: 6rem;
+}
+.subtext{
+    font-family: 'Rubik Beastly', cursive;
+    font-size: 3rem;
+    color: rgb(56, 57, 63);
+}
+.subtext span{
+    font-weight: 300;
+}
+
+/* main */
+.gameboard{
+    position: relative;
+    background-color: rgb(226, 149, 209);
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 6px;
+}
+.boxes{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    /* border: 1px dotted green; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    border-radius: 6px;
+}
+.box{
+    position: relative;
+    background-color: rgb(238, 168, 205);
+    border-radius: 4px;
+}
+.box:hover{
+    cursor: pointer;
+    background-color: rgb(221, 94, 168);
+}
+
+/* player signs */
+.O{
+    background-color: var(--accent-red);
+    color: var(--red);
+}
+.X{
+    background-color: var(--accent-yellow);
+    color: var(--dark-yellow);
+}
+.O::after{
+    content: 'O';
+    color: var(--red);
+}
+.X::after{
+    content: 'X';
+    color: var(--dark-yellow);
+}
+.O::after, .X::after{
+    font-family: 'Rubik Beastly', cursive;
+    font-size: 8rem;
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
+b {
+    font-weight: normal;
+}
+.eraseB {
+    height: 3rem;
+    width: 10rem;
+}
+#jcode {
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
